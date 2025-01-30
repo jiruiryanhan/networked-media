@@ -1,0 +1,38 @@
+
+
+.redText{
+    color: red;
+    background-color: greenyellow
+}
+
+body {
+    background-color: black;
+    color: white; /* Optional: Makes text readable */
+}
+
+.star1{
+    color: darkred;
+    background-color: darkred
+}
+
+.star2{
+    color: darkblue;
+    background-color: darkblue
+}
+
+a{
+    color: rgb(0, 127, 169);
+}
+
+.pscl{
+    color: black;
+    background: yellow ;
+}
+
+.gray{
+    color:rgb(60, 60, 60)
+}
+
+.res{
+    color: magenta
+}
