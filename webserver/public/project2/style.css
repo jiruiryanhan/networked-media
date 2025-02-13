@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background: black;
+    color: rgb(0, 255, 30);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  
+  .timeline {
+    position: relative;  
+    width: 100%;
+    height: 200px;        
+    background-image: url('tm.png');   
+    background-size: 100% 100%;
+    border-radius: 0px;
+    margin: none;
+  }
+  
+  .city-dot {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .city-dot.flip-label {
+    flex-direction: row-reverse; 
+    offset: -20px;
+  }
+
+
+
+  .city-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: crimson; 
+    margin-right: 8px;
+  }
+  
+  .city-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(0, 255, 34);
+    background-color: black;
+    white-space: pre;
+    transition: background-color 0.5s ease-in, font-size 0.5s ease-in, font-weight 0.5s ease-in;
+  }
+
+  .city-label:hover {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(4, 126, 30);
+    white-space: pre;
+    transition: background-color 0.5s ease-out, font-size 0.5s ease-out, font-weight 0.5s ease-out;
+    
+  }
