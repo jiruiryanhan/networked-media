@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Spotters Intelligence</title>
+        <link href="style.css" rel="stylesheet">
+        <script src="/script.js"></script>
+    </head>
+    <body>
+        <div class="flex-container"> 
+            <div class="input-container"> 
+                <img class="logo" src="SP.png">
+                <h3>Add a new notable flight</h3>
+                <form method="POST" action="/upload"> 
+                    <div class="textline">
+                        <p>Flight No. </p>
+
+                        <p>Aircraft Type </p>
+                        
+                        <p>Reason notable </p>
+                        <p>  </p>
+                        <p>  </p>
+                        <p>  </p>
+                        
+                    </div>
+                    <div class="controls-container"> 
+                        
+                        <input class="IATA" type="text" name="textMessage" placeholder="e.g. UA888">
+                        <input class="TYPE" type="text" name="airType" placeholder="e.g. AIRBUS A350-1041">
+                        <input class="REASON" type="text" name="reason" placeholder="e.g. Special Livery of ...">
+                   
+                    </div>
+                    <div class="textline">
+                        <p>Est. time of arrival. </p>
+
+                        <p>Departure airport </p>
+                        <p>Registration No. </p>
+                        <p></p>
+                        <p></p>
+                        <p>  </p>
+                        <p>  </p>
+                        <p>  </p>
+                        <p>  </p>
+                        <p>  </p>
+                        
+                    </div>
+                    <div class="controls-container">
+                        <input class="TIME" type="text" name="arrTime" placeholder="e.g. 2130">
+                        <input class="DEP" type="text" name="depApt" placeholder="e.g. DCA">
+                        <input class="DEP" type="text" name="reg" placeholder="e.g. N12345">
+                        <p>  </p>
+                        <p>  </p>
+                        <input type="submit" name="sbtn" value="Add">
+                    </div>
+                </form>
+                <div id="flights-container">
+                    <% allPosts.forEach((flight, index) => { %>
+                        <div class="flight-card">
+                            <div class="flight-1st">
+                                <h2><%= flight.registration %></h2>
+                                <h2><strong>ETA: </strong> <%= flight.arrivalTime %></h2>
+                            </div>
+                            
+                            <div class="flight-1st">
+                                <p><strong>Remark:</strong> <%= flight.reason %></p>
+                                <p><strong>Aircraft:</strong> <%= flight.aircraftType %></p>
+                            </div>
+
+                            <p><strong>Departed from:</strong> <%= flight.departureAirport %></p>
+                            
+                            <div class="flight-2nd"> 
+                                <p class="green-text"><strong>Confirmed by </strong> <%= flight.upvotes %> <strong>community members </strong></p>
+                                <form method="POST" action="/upvote">
+                                    <input type="hidden" name="flightNo" value="<%= flight.flightNo %>">
+                                    <button id="confirm" type="submit">I Confirm</button>
+                                </form>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+
+            </div>
+            <div> 
+                <div class="chart-container">
+                    <img id="runway-chart" class="chart" src="JFK.png"> 
+                </div>
+            </div>
+            <div class="right-container"> 
+
+                <div class="right-inner">
+                    <h1>Spotting Report</h1>
+                </div>
+                <div id="spotting-condition" class="spotting-container">
+                    <p id="spotting-text">Loading...</p>
+                </div>
+                <div id="prediction-display" class="prediction-container">
+                    <h2>Runway Change Prediction</h2>
+                </div>
+
+                <div id="atis-display">Loading ATIS...</div>
+                <p> </p>
+                <div id="weather-display">Loading wind forecast for next 6 hours...</div>
+            </div>
+        </div>
+    </body>
+</html>

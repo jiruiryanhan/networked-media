@@ -1,0 +1,32 @@
+[
+  {
+    "flightNo": "LY4",
+    "aircraftType": "BOEING B787-9",
+    "reason": "Special Livery: Retro",
+    "arrivalTime": 1900,
+    "departureAirport": "TLV",
+    "registration": "4X-EDF",
+    "date": "3/10/2025, 4:37:25 PM",
+    "upvotes": 5
+  },
+  {
+    "flightNo": "Unknown Flight",
+    "aircraftType": "Unknown Type",
+    "reason": "No reason provided",
+    "arrivalTime": 2000,
+    "departureAirport": "Unknown Airport",
+    "registration": "Unknown Registration",
+    "date": "3/10/2025, 6:22:25 PM",
+    "upvotes": 0
+  },
+  {
+    "flightNo": "QTR1",
+    "aircraftType": "BOEING B747-8",
+    "reason": "Qatari Royals Amir Flight ",
+    "arrivalTime": 2000,
+    "departureAirport": "DOH",
+    "registration": "A7-HHB",
+    "date": "3/10/2025, 6:17:19 PM",
+    "upvotes": 0
+  }
+]
