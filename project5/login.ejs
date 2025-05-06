@@ -1,0 +1,14 @@
+
+<%- include('nav.ejs') %>
+
+<body>
+       <div id="login-form-container" class="form-container">
+        <h1 id="login-title">Login</h1>
+        <form id="login-form" method="POST" action="/authenticate">
+            <input id="login-username" type="text" name="username" placeholder="Username" required>
+            <input id="login-password" type="password" name="password" placeholder="Password" required>
+            <input id="login-submit" type="submit" name="submitbutton" value="Login" class="submit-btn">
+        </form>
+        <a id="login-registerlink" href="/register">Don't have an account? Register here.</a>
+    </div>
+</body>

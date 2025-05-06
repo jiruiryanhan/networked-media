@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Pitch Drop</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <meta charset="utf-8" />
+    
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+    <%- include('nav.ejs') %>
+<!-- 
+    <div class="search-container">
+      <form method="GET" action="/search">
+        <input
+          type="text"
+          class="search-bar"
+          name="searchTerm"
+          placeholder="Search..."
+        />
+        <div class="search-checkbox">
+          <input
+            type="checkbox"
+            class="search-bar-checkbox"
+            id="imageOnlyCheckbox"
+            name="imageOnly"
+          />
+          <label for="imageOnlyCheckbox"
+            >Only include search results with images</label
+          >
+        </div>
+      </form>
+    </div>
+    <div class="form-container">
+      <form method="POST" action="/upload" enctype="multipart/form-data">
+        <div class="form-content-container">
+          <div>
+            <input type="text" name="text" placeholder="Say something..." />
+          </div>
+          <div class="submit-container">
+            <div>
+              <label for="file-upload" class="custom-file-upload"> </label>
+              <input id="file-upload" name="theimage" type="file" />
+            </div>
+            <div>
+              <input type="submit" name="submitbutton" value="Submit" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div> -->
+    <main>
+      <div id="mysketch"></div>
+    </main>
+    <!-- <script src="socket.js"></script> -->
+    <h2 id="centered">Hi <%= fullname  %>, you saw <%= collectibles.repeatable.spoton %> touchdowns!</h2>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<%- include('nav.ejs') %>
+
+
+<div id="reg-form-container" class="form-container">
+    <h1 id="reg-title">Register for a new account!</h1>
+    <form id="reg-form" method="POST" action="/signup" enctype="multipart/form-data">
+        <div id="reg-content-container" class="register-content-container">
+            <input id="reg-fullname" type="text" name="fullname" placeholder="Your full name" class="login-full-name">
+
+            <input id="reg-username" type="text" name="username" placeholder="Choose a username" class="login-username">
+
+            <input id="reg-password" type="password" name="password" placeholder="Choose a password" class="login-password">
+
+            <input id="reg-submit" type="submit" name="submitbutton" value="Make my account!" class="submit-btn">
+        </div>
+    </form>
+</div>

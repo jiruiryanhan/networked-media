@@ -1,0 +1,18 @@
+<div class="post">
+    <a href="/post/<%=post._id%>">
+      <span class="date"> <%= post.date %></span>
+      <br>
+      <% if(post.image) { %>
+          <img src="<%=post.image %>" class="post-img">
+      <% } %>
+      <p class="post-text"><%= post.text %></p>
+    </a>
+
+    <form method="POST" action="/like">
+        <label for="like-message-<%=post._id%>" class="like-label">like <%=post.likes %> </label>
+        <input id="like-message-<%=post._id%>" class="like-submit-btn" type="submit" value="👍">
+
+        <input type="hidden" name="postId" value="<%=post._id%>">
+    </form>
+
+  </div>
